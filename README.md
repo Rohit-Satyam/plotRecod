@@ -1,6 +1,27 @@
 # plotRecod
 Pipeline to plot coverage of recodonized genes from RNAseq data.
 
+# Setup the environment
+
+```bash
+mamba create -n plotrecod -c conda-forge -c bioconda bwa-mem2 \
+fastp \
+mosdepth  \
+r-argparse
+r-base \
+r-biocmanager \
+r-dplyr \
+r-egg \
+r-ggplot2 \
+r-ggpubr \
+r-officer \
+r-patchwork \
+r-rvg \
+samtools \
+seqkit \
+seqtk 
+```
+
 ## Input required
 **For Nextflow Pipeline**
 1. Fasta file from SNAPGene software of the recodonized gene. Since the pipeline uses BWA which does not perform spliced alignment, users are expected to provide the recodonized fasta with exons only. But feel free to add other regions such as loxPint and UTRs.
