@@ -59,7 +59,7 @@ See `plotsheet.csv` for example.
 nextflow run main.nf --input "data/EIAG13*_L001_R{1,2}_001.fastq.gz" --ref "resources/eiap13.fa" --feature "resources/eiap13.txt" --geneID="PF3D7_xxxxxxx" -w work4
 
 #If you wish to generate feature TSV manually
-nextflow run main.nf --input "data/EIAG9*_L001_R{1,2}_001.fastq.gz" --ref "resources/eiap9.fa" --geneID="PF3D7_xxxxxx" -w work2
+nextflow run main.nf --input "data/EIAG13*_L001_R{1,2}_001.fastq.gz" --ref "resources/eiap9.fa" --geneID="PF3D7_xxxxxx" -w work2
 ```
 #### Step2
 
