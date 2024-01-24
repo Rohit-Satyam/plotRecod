@@ -1,0 +1,2 @@
+Note to self: The fasta file and feature file in this folder are dummy and will fail if run for testing. The files are provided as a template and shows that if the user provide input fasta as a combination of 
+capital and small nuclotides (small for non-recodonized region and Capital for recodonized region) all of it will be converted to capital by the pipeline since small case is detected as soft-masked regions by the aligners.
