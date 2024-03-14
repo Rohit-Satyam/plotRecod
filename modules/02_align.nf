@@ -58,7 +58,7 @@ shell:
 
 '''
 # Preparing minimal feature file after removing duplicate regions
-!{projectDir}/bin/reformat.sh !{feature} > !{params.geneID}.feature.tsv
+!{projectDir}/bin/reformat.sh !{feature.toRealPath()} > !{params.geneID}.feature.tsv
 '''
 
 }
