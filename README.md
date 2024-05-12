@@ -7,6 +7,7 @@ Pipeline to plot coverage of recodonized genes from RNAseq data.
 mamba create -n plotrecod -c conda-forge -c bioconda bwa-mem2 \
 fastp \
 mosdepth  \
+nextflow \
 r-argparse \
 r-base \
 r-biocmanager \
