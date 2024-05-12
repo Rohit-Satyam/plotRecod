@@ -61,6 +61,15 @@ nextflow run main.nf --input "data/EIAG13*_L001_R{1,2}_001.fastq.gz" --ref "reso
 
 #If you wish to generate feature TSV manually
 nextflow run main.nf --input "data/EIAG13*_L001_R{1,2}_001.fastq.gz" --ref "resources/eiap9.fa" --geneID="PF3D7_xxxxxx" -w work2
+
+## Skip trimming with more cpus and jobs
+nextflow run main.nf --input "data/*_L001_R{1,2}_001_trimmed.fastq" --ref "resources/PF3D7_0613800.recod.fasta" --geneID="PF3D7_xxxxxxx" --feature "resources/PF3D7_xxxxxxx.txt" --skipTrim=true -w work2 -resume --cpus 10 --jobs 2 --memory 90g
+
+##submit as sbatch. note the single inverted commas were used
+sbatch -J amitjob --mem=150G --time=03:00:00 --cpus-per-task=40 --mail-type=FAIL \
+--partition=batch -o amit.out -e amit.err \
+--wrap="nextflow run main.nf --input data/*_L001_R{1,2}_001_trimmed.fastq' --ref 'resources/PF3D7_xxxxx.recod.fasta' --geneID='PF3D7_xxxxx' --feature 'resources/PF3D7_xxxxx.txt' \
+--skipTrim=true -w work2 -resume --cpus 40 --jobs 3 --memory 50g"
 ```
 #### Step2
 
