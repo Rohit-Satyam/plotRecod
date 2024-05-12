@@ -64,8 +64,8 @@ if (params.skipTrim == false){
 	BWA2(FASTP.out[0],Channel.fromPath(params.ref))
 	BAMSTATS(BWA2.out[0])
 } else {
-	BWA2(input_fastqs)
-	BAMSTATS(BWA2.out[0],Channel.fromPath(params.ref))
+	BWA2(input_fastqs,Channel.fromPath(params.ref))
+	BAMSTATS(BWA2.out[0])
 }
 
 if (params.feature !=""){
