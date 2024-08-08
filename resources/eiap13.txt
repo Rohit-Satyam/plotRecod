@@ -2,7 +2,7 @@ PF3D7_XXXXXXX                                   	1..3906   	3906	=>	mRNA
 PF3D7_1413700                                     	1..3906   	3906	=>	gene        
 PF3D7_XXXXXXX LHR                               	1..50     	50  	==	misc_feature
 PF3D7_XXXXXXX-p1-CDS1                           	1..50     	50  	=>	CDS         
-exon_PF3D7_1413700-E1                             	1..50     	50  	==	exon        
+exon_PF3D7_XXXXXXX-E1                             	1..50     	50  	==	exon        
 loxPINT                                           	51..227   	177 	==	misc_feature
 loxP                                              	85..118   	34  	==	protein_bind
 LoxP                                              	85..118   	34  	==	misc_feature
